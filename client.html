@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<body>
+<p>This is some text.</p>
+<button id="post-btn">Im a button</button>
+
+<script>
+const buttons = document.getElementByTagName('button');
+
+buttons.forEach(function(btn) {
+	btn.addEventListener('click', async _ => {
+	  try {     
+	    const response = await fetch('http://192.168.1.182:8080/' + btn.id, {
+	      method: 'POST',
+	    });
+	    console.log('Completed!', response);
+	  } catch(err) {
+	    console.error(`Error: ${err}`);
+	  }
+	});
+})
+
+</script>
+
+</body>
+</html>
