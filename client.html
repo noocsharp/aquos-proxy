@@ -1,25 +1,58 @@
 <!doctype html>
 <html>
+<head>
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-columns: auto auto auto;
+		}
+		.grid-item {
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
+		}
+	</style>
+</head>
 <body>
-<p>This is some text.</p>
-<button id="post-btn">Im a button</button>
+<div class="grid-container">
+	<button class="grid-item" id="mute">Mute</button>
+	<button class="grid-item" id="voldown">-</button>
+	<button class="grid-item" id="volup">+</button>
+
+	<button class="grid-item" id="return">Return</button>
+	<button class="grid-item" id="up">Up</button>
+	<button class="grid-item" id="enter">Enter</button>
+	<button class="grid-item" id="left">Left</button>
+	<button class="grid-item" id="down">Down</button>
+	<button class="grid-item" id="right">Right</button>
+
+	<button class="grid-item" id="chdown">CH-</button>
+	<button class="grid-item" id="chup">CH+</button>
+	<button class="grid-item" id="netflix">Netflix</button>
+
+	<button class="grid-item" id="input">Input</button>
+	<button class="grid-item" id="play">Play</button>
+	<button class="grid-item" id="pause">Pause</button>
+
+	<button class="grid-item" id="poweron">On</button>
+	<button class="grid-item" id="poweroff">Off</button>
+</div>
 
 <script>
-const buttons = document.getElementByTagName('button');
+	const buttons = document.getElementsByTagName('button');
 
-buttons.forEach(function(btn) {
-	btn.addEventListener('click', async _ => {
-	  try {     
-	    const response = await fetch('http://192.168.1.182:8080/' + btn.id, {
-	      method: 'POST',
-	    });
-	    console.log('Completed!', response);
-	  } catch(err) {
-	    console.error(`Error: ${err}`);
-	  }
-	});
-})
-
+	for (let i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', async _ => {
+		  try {     
+		    const response = await fetch('http://192.168.1.182:8080/' + buttons[i].id, {
+		      method: 'POST',
+		    });
+		    console.log('Completed!', response);
+		  } catch(err) {
+		    console.error(`Error: ${err}`);
+		  }
+		});
+	}
 </script>
 
 </body>
