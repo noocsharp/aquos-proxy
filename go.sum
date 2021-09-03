@@ -16,3 +16,5 @@ github.com/noocsharp/go-aquos v0.1.2-0.20210903014038-cd997ce84e44 h1:OS5sCiMFSY
 github.com/noocsharp/go-aquos v0.1.2-0.20210903014038-cd997ce84e44/go.mod h1:0wU8/BjgmLKksf3ZjCoT5sJeu2e+aadh6K2ozKYC720=
 github.com/noocsharp/go-aquos v0.1.2-0.20210903014433-a1e2ccad4187 h1:x8iLOqmEdY8LS1z0o2RmcUVSgMXKCiIV3aERnsBr+r0=
 github.com/noocsharp/go-aquos v0.1.2-0.20210903014433-a1e2ccad4187/go.mod h1:0wU8/BjgmLKksf3ZjCoT5sJeu2e+aadh6K2ozKYC720=
+github.com/noocsharp/go-aquos v0.1.2-0.20210903022428-43510b563a0f h1:hI/nzd3HJgWrVjIcDQG78/JXG2bVS+uGty7GboGdRDo=
+github.com/noocsharp/go-aquos v0.1.2-0.20210903022428-43510b563a0f/go.mod h1:0wU8/BjgmLKksf3ZjCoT5sJeu2e+aadh6K2ozKYC720=

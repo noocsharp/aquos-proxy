@@ -50,7 +50,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		} else if r.URL.Path == "/netflix" {
 			client.Netflix()
 		} else if r.URL.Path == "/input" {
-			client.ToggleInput()
+			client.Input()
 		} else if r.URL.Path == "/play" {
 			client.Play()
 		} else if r.URL.Path == "/pause" {
@@ -59,6 +59,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 			client.Power(true)
 		} else if r.URL.Path == "/poweroff" {
 			client.Power(false)
+		} else if r.URL.Path == "/menu" {
+			client.Menu()
+		} else if r.URL.Path == "/smartcentral" {
+			client.SmartCentral()
+		} else if r.URL.Path == "/exit" {
+			client.Exit()
 		}
 	}
 }
